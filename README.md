@@ -51,6 +51,8 @@
                             with respect to time ( like hike in delay if there are holidays inbetween, location of issue ). 
                             If we plot trends in data we generated it looks like this :
                             
+![Screenshot](trend.png)
+                            
                             This shows that there is no real trend in the data we are using , because we have generated this
                             data randomly. 
                             The model suggested here is expected to give better result with real scenario data.
