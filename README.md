@@ -50,6 +50,20 @@
           We have seen, the delay caused in real scenarios is depends on many factor, hence shows a trend 
           with respect to time ( like hike in delay if there are holidays inbetween, location of issue ). 
           If we plot trends in data we generated it looks like this :
+          
+```python
+
+from statsmodels.tsa.seasonal import seasonal_decompose
+temp = df[['start_time','delay']]
+temp = temp.reset_index()
+temp = temp.set_index('start_time')
+result = seasonal_decompose(temp['delay'].values, freq = 1)
+fig = plt.figure()  
+fig = result.plot()  
+fig.set_size_inches(20, 12)
+
+```
+            
                             
 ![Screenshot](trend.png)
                             
